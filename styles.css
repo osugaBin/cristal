@@ -1,0 +1,31 @@
+/* 全局样式和Tailwind自定义工具类 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 20 20 20; /* 深灰 */
+    --color-light: 253 245 230; /* 豆乳色 */
+    --color-accent: 240 230 215; /* 浅豆乳色 */
+    --color-secondary: 107 114 128; /* 中灰 */
+  }
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .transition-transform-opacity {
+    transition-property: transform, opacity;
+  }
+}
+
+/* 自定义样式 */
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-light text-primary antialiased;
+}
